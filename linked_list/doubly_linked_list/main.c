@@ -11,8 +11,7 @@ int main() {
   while (1) {
 
     printf("\n\nEnter the action you want to perform:");
-    printf(
-        "\n1. Insert\n2. Delete\n 3. Update\n 4. Search\n5. Search\n6. Exit");
+    printf("\n1. Insert\n2. Delete\n3. Update\n4. Search\n5. Search\n6. Exit");
     printf("\nEnter the action you want to perform: ");
     scanf("%d", &choice);
     printf("\n");
@@ -22,6 +21,10 @@ int main() {
       insertNode(&head);
 
       break;
+
+    case 6:
+      printf("Thank you!\n");
+      return 0;
 
     default:
       printf("Entered invalid option, please try again.");
