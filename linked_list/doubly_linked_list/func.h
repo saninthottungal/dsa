@@ -7,3 +7,6 @@ typedef struct Node{
     struct Node* prev;
     struct Node* next;
 } Node;
+
+
+void insertNode(Node **head);
