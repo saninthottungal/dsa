@@ -74,3 +74,17 @@ void deleteNode(Node **head) {
     printf("Element %d not found!", data);
   }
 }
+
+void displayList(Node *head) {
+  if (head == NULL) {
+    printf("List is empty!");
+    return;
+  }
+
+  Node *ptr = head;
+  printf("The elements of List are:\n");
+  while (ptr != NULL) {
+    printf("Data: %d\n", ptr->data);
+    ptr = ptr->next;
+  }
+}

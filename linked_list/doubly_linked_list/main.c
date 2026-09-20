@@ -11,7 +11,7 @@ int main() {
   while (1) {
 
     printf("\n\nEnter the action you want to perform:");
-    printf("\n1. Insert\n2. Delete\n3. Update\n4. Search\n5. Search\n6. Exit");
+    printf("\n1. Insert\n2. Delete\n3. Update\n4. Search\n5. Display\n6. Exit");
     printf("\nEnter the action you want to perform: ");
     scanf("%d", &choice);
     printf("\n");
@@ -23,6 +23,10 @@ int main() {
 
     case 2:
       deleteNode(&head);
+      break;
+
+    case 5:
+      displayList(head);
       break;
 
     case 6:
