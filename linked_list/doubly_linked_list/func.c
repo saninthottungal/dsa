@@ -118,3 +118,25 @@ void updateNode(Node *head) {
     printf("Element %d not found!", oldData);
   }
 }
+
+void searchNode(Node *head) {
+
+  if (head == NULL) {
+    printf("List is empty!");
+    return;
+  }
+
+  int search, count = 1;
+  printf("Enter the element you want to search: ");
+  scanf("%d", &search);
+  printf("\n");
+
+  while (head != NULL) {
+    if (head->data == search) {
+      printf("Element %d found at position: %d\n", search, count);
+    }
+
+    count++;
+    head = head->next;
+  }
+}
