@@ -11,3 +11,4 @@ typedef struct Node {
 void insertNode(Node **head);
 void deleteNode(Node **head);
 void displayList(Node *head);
+void updateNode(Node *head);

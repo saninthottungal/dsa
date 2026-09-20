@@ -25,6 +25,10 @@ int main() {
       deleteNode(&head);
       break;
 
+    case 3:
+      updateNode(head);
+      break;
+
     case 5:
       displayList(head);
       break;

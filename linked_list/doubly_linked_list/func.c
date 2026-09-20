@@ -88,3 +88,33 @@ void displayList(Node *head) {
     ptr = ptr->next;
   }
 }
+
+void updateNode(Node *head) {
+  if (head == NULL) {
+    printf("List is empty!");
+    return;
+  }
+
+  int oldData, newData;
+  bool didFoundAny = false;
+  Node *ptr = head;
+  printf("Enter the element you want to update: ");
+  scanf("%d", &oldData);
+  printf("Enter the element you want to replace with: ");
+  scanf("%d", &newData);
+
+  while (ptr != NULL) {
+    if (ptr->data == oldData) {
+      ptr->data = newData;
+      didFoundAny = true;
+    } else {
+      ptr = ptr->next;
+    }
+  }
+
+  if (didFoundAny) {
+    printf("Element %d got replaced with %d successfully!", oldData, newData);
+  } else {
+    printf("Element %d not found!", oldData);
+  }
+}
