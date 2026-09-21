@@ -5,7 +5,7 @@ int main() {
 
   printf("Welcome to Queue program:");
 
-  int arr[50] = {0}, choice, front = -1, rear = -1;
+  int arr[MAX] = {0}, choice, front = -1, rear = -1;
 
   while (1) {
 
@@ -17,7 +17,19 @@ int main() {
     switch (choice) {
 
     case 1:
+      enqueue(arr, &front, &rear);
+      break;
 
+    case 2:
+      dequeue(arr, &front, &rear);
+      break;
+
+    case 3:
+      peek(arr, front, rear);
+      break;
+
+    case 4:
+      display(arr, front, rear);
       break;
 
     case 5:
