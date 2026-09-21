@@ -1,8 +1,13 @@
+#include "func.h"
 #include <stdio.h>
+
+#ifndef MAX
+#define MAX 50
+#endif
 
 int main() {
 
-  int arr[50] = {0}, choice;
+  int arr[MAX] = {0}, choice, top = 0;
 
   while (1) {
 
@@ -14,6 +19,7 @@ int main() {
 
     switch (choice) {
     case 1:
+      push(arr, &top, MAX);
       break;
 
     case 5:
