@@ -27,14 +27,24 @@ void pop(int *arr, int *top) {
   printf("Element %d popped from stack!", deletedEl);
 }
 
-void display(int *arr, int *top) {
-  if (*top <= -1) {
+void peek(int *arr, int top) {
+
+  if (top <= -1) {
+    printf("Stack underflow!");
+    return;
+  }
+
+  printf("peek: %d", arr[top]);
+}
+
+void display(int *arr, int top) {
+  if (top <= -1) {
     printf("Stack underflow!");
     return;
   }
 
   printf("The elements of stack are: \n");
-  for (int i = *top; i >= 0; i--) {
+  for (int i = top; i >= 0; i--) {
     printf("Data: %d\n", arr[i]);
   }
 }

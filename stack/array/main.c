@@ -26,8 +26,12 @@ int main() {
       pop(arr, &top);
       break;
 
+    case 3:
+      peek(arr, top);
+      break;
+
     case 4:
-      display(arr, &top);
+      display(arr, top);
       break;
 
     case 5:
