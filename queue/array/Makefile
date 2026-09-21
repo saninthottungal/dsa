@@ -1,0 +1,3 @@
+CC = clang
+FLAGS = -Wall
+
