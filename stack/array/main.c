@@ -22,6 +22,14 @@ int main() {
       push(arr, &top, MAX);
       break;
 
+    case 2:
+      pop(arr, &top);
+      break;
+
+    case 4:
+      display(arr, &top);
+      break;
+
     case 5:
       return 0;
 
