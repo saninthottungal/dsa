@@ -3,13 +3,13 @@
 
 int main() {
 
-  printf("Welcome to Queue program:");
+  printf("\nWelcome to Queue program:");
 
   int arr[MAX] = {0}, choice, front = -1, rear = -1;
 
   while (1) {
 
-    printf("\n1. Enqueue\n2. Dequeue\n3. Peek\n4. Display\n5. Exit\n");
+    printf("\n\n1. Enqueue\n2. Dequeue\n3. Peek\n4. Display\n5. Exit\n");
     printf("Please enter your choice: ");
     scanf("%d", &choice);
     printf("\n");
@@ -33,7 +33,7 @@ int main() {
       break;
 
     case 5:
-      printf("Thank you!");
+      printf("Thank you!\n");
       return 0;
 
     default:
