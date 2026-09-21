@@ -16,7 +16,7 @@ void push(int *arr, int *top, int max) {
 }
 
 void pop(int *arr, int *top) {
-  if (top <= 0) {
+  if (*top <= -1) {
     printf("Stack underflow!");
     return;
   }
@@ -28,12 +28,13 @@ void pop(int *arr, int *top) {
 }
 
 void display(int *arr, int *top) {
-  if (top <= 0) {
+  if (*top <= -1) {
     printf("Stack underflow!");
     return;
   }
 
+  printf("The elements of stack are: \n");
   for (int i = *top; i >= 0; i--) {
-    printf("Data: %d", arr[i]);
+    printf("Data: %d\n", arr[i]);
   }
 }

@@ -7,7 +7,7 @@
 
 int main() {
 
-  int arr[MAX] = {0}, choice, top = 0;
+  int arr[MAX] = {0}, choice, top = -1;
 
   while (1) {
 
