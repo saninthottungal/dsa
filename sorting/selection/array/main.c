@@ -11,18 +11,21 @@ void displayArray(int *arr, int count) {
 }
 
 void selectionSort(int *arr, int count) {
-  int key;
+  int minIndex, temp;
 
-  for (int i = 1; i < count; i++) {
-    key = arr[i];
+  for (int i = 0; i < count; i++) {
+    minIndex = i;
 
-    for (int j = i - 1; j >= 0; j--) {
-      if (arr[j] > key) {
-        arr[j + 1] = arr[j];
-        arr[j] = key;
-      } else {
-        break;
+    for (int j = i + 1; j < count; j++) {
+      if (arr[j] < arr[minIndex]) {
+        minIndex = j;
       }
+    }
+
+    if (minIndex != i) {
+      temp = arr[minIndex];
+      arr[minIndex] = arr[i];
+      arr[i] = temp;
     }
   }
 }
