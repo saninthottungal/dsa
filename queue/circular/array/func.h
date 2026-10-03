@@ -15,7 +15,7 @@ void enqueue(struct Queue *q);
 void dequeue(struct Queue *q);
 void display(struct Queue *q);
 void peek(struct Queue *q);
-void isFull(struct Queue *q);
-void isEmpty(struct Queue *q);
+int isFull(struct Queue *q);
+int isEmpty(struct Queue *q);
 
 #endif
