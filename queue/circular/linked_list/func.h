@@ -11,7 +11,7 @@ struct Queue {
 };
 
 void initQueue(struct Queue *q);
-void enqueue(struct Queue *q);
+void enqueue(struct Queue *q, int value);
 void dequeue(struct Queue *q);
 void display(struct Queue *q);
 int isEmpty(struct Queue *q);
