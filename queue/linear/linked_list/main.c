@@ -6,6 +6,8 @@ int main(void) {
   int choice;
   struct Queue q;
 
+  initQueue(&q);
+
   while (1) {
     printf("\n\n1.Enqueue\n2.Dequeue\n3.Peek\n4.Display\n5.EXit\n");
     printf("Choose your option: ");

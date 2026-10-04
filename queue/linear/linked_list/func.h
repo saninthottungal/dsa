@@ -8,10 +8,11 @@ struct Node {
 
 struct Queue {
   struct Node *front;
-  struct Node *tail;
+  struct Node *rear;
   int count;
 };
 
+void initQueue(struct Queue *q);
 void enqueue(struct Queue *q);
 void dequeue(struct Queue *q);
 void peek(struct Queue *q);
