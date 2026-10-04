@@ -24,7 +24,21 @@ void enqueue(struct Queue *q, int value) {
   }
 }
 
-void dequeue(struct Queue *q) {}
+void dequeue(struct Queue *q) {
+  if (isEmpty(q)) {
+    return;
+  }
+
+  if (q->rear == q->rear->next) {
+    free(q->rear);
+    q->rear = NULL;
+
+  } else {
+    struct Node *temp = q->rear->next;
+    q->rear->next = temp->next;
+    free(temp);
+  }
+}
 
 void display(struct Queue *q) {
   if (isEmpty(q)) {

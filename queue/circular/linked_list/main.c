@@ -11,6 +11,11 @@ int main(void) {
   display(&q);
 
   printf("\n");
+  dequeue(&q);
+  dequeue(&q);
+  display(&q);
+
+  printf("\n");
 
   return 0;
 }
