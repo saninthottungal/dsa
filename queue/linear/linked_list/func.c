@@ -4,7 +4,7 @@
 
 void initQueue(struct Queue *q) {
   q->front = NULL;
-  q->tail = NULL;
+  q->rear = NULL;
   q->count = 0;
 }
 
@@ -29,8 +29,29 @@ void enqueue(struct Queue *q) {
 
 void dequeue(struct Queue *q) {}
 
-void peek(struct Queue *q) {}
+void peek(struct Queue *q) {
+  if (isEmpty(q)) {
+    return;
+  }
 
-void display(struct Queue *q) {}
+  printf("The last inserted element is: %d", q->rear->data);
+}
 
-int isEmpty(struct Queue *q) { return q->front == NULL; }
+void display(struct Queue *q) {
+  struct Node *temp = q->front;
+
+  while (temp != NULL) {
+    printf("%d ", temp->data);
+    temp = temp->next;
+  }
+}
+
+int isEmpty(struct Queue *q) {
+
+  if (q->front == NULL) {
+    printf("Queue is Empty!");
+    return 1;
+  }
+
+  return 0;
+}
