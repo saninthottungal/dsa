@@ -13,7 +13,7 @@ void enqueue(struct Queue *q, int value) {
   node->data = value;
   node->next = NULL;
 
-  if (isEmpty(q)) {
+  if (q->rear == NULL) {
     q->rear = node;
     q->rear->next = node;
 
