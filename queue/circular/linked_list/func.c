@@ -36,7 +36,7 @@ void display(struct Queue *q) {
   do {
     printf("%d ", temp->data);
     temp = temp->next;
-  } while (temp != q->rear);
+  } while (temp != q->rear->next);
 }
 
 int isEmpty(struct Queue *q) {
