@@ -18,8 +18,8 @@ void enqueue(struct Queue *q, int value) {
     q->rear->next = node;
 
   } else {
+    node->next = q->rear->next;
     q->rear->next = node;
-    node->next = q->rear;
     q->rear = q->rear->next;
   }
 }
@@ -31,7 +31,7 @@ void display(struct Queue *q) {
     return;
   }
 
-  struct Node *temp = q->rear;
+  struct Node *temp = q->rear->next;
 
   do {
     printf("%d ", temp->data);
