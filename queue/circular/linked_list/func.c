@@ -26,7 +26,18 @@ void enqueue(struct Queue *q, int value) {
 
 void dequeue(struct Queue *q) {}
 
-void display(struct Queue *q) {}
+void display(struct Queue *q) {
+  if (isEmpty(q)) {
+    return;
+  }
+
+  struct Node *temp = q->rear;
+
+  do {
+    printf("%d ", temp->data);
+    temp = temp->next;
+  } while (temp != q->rear);
+}
 
 int isEmpty(struct Queue *q) {
   if (q->rear == NULL) {
