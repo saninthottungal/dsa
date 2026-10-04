@@ -4,7 +4,7 @@
 int main(void) {
 
   int choice;
-  struct Node *head;
+  struct Queue q;
 
   while (1) {
     printf("\n\n1.Enqueue\n2.Dequeue\n3.Peek\n4.Display\n5.EXit\n");
@@ -13,15 +13,19 @@ int main(void) {
 
     switch (choice) {
     case 1:
+      enqueue(&q);
       break;
 
     case 2:
       break;
+      dequeue(&q);
 
     case 3:
+      peek(&q);
       break;
 
     case 4:
+      display(&q);
       break;
 
     case 5:

@@ -6,10 +6,16 @@ struct Node {
   struct Node *next;
 };
 
-void enqueue(struct Node **q);
-void dequeue(struct Node *q);
-void peek(struct Node *q);
-void display(struct Node *q);
-int isEmpty(struct Node *q);
+struct Queue {
+  struct Node *front;
+  struct Node *tail;
+  int count;
+};
+
+void enqueue(struct Queue *q);
+void dequeue(struct Queue *q);
+void peek(struct Queue *q);
+void display(struct Queue *q);
+int isEmpty(struct Queue *q);
 
 #endif
