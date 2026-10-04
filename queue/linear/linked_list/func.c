@@ -27,7 +27,21 @@ void enqueue(struct Queue *q) {
   }
 }
 
-void dequeue(struct Queue *q) {}
+void dequeue(struct Queue *q) {
+  if (isEmpty(q)) {
+    return;
+  }
+
+  struct Node *temp = q->front;
+  q->front = q->front->next;
+  free(temp);
+
+  if (q->front == NULL) {
+    q->rear = NULL;
+  }
+
+  printf("dequeued!");
+}
 
 void peek(struct Queue *q) {
   if (isEmpty(q)) {

@@ -9,5 +9,5 @@ queue_singly: main.o func.o
 main.o: main.c
 	$(CC) $(FLAGS) -c main.c
 
-func.o: func.o
+func.o: func.c
 	$(CC) $(FLAGS) -c func.c
