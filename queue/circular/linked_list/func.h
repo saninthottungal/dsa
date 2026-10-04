@@ -11,9 +11,9 @@ struct Queue {
   struct Node *rear;
 };
 
-void enqueue(Queue *q);
-void dequeue(Queue *q);
-void display(Queue *q);
-int isEmpty(Queue *q);
+void enqueue(struct Queue *q);
+void dequeue(struct Queue *q);
+void display(struct Queue *q);
+int isEmpty(struct Queue *q);
 
 #endif
