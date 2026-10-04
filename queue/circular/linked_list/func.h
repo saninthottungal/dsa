@@ -7,10 +7,10 @@ struct Node {
 };
 
 struct Queue {
-  struct Node *front;
   struct Node *rear;
 };
 
+void initQueue(struct Queue *q);
 void enqueue(struct Queue *q);
 void dequeue(struct Queue *q);
 void display(struct Queue *q);
